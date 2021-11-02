@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do JS Vanilla</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+
+    <main>
+        <div class="toDo contenedor">
+            <h1 class="toDoHeading">To Do en JavaScript Vanilla</h1>
+            <form id="formulario" class="formulario">
+                <div class="formulario__grupo">
+                    <label for="formulario__input" class="formulario__label">Por comprar:</label>
+                    <input id="formulario__input" class="formulario__input" type="text" placeholder="Tu producto a comprar...">
+                    <input id="formulario__submit" class="formulario__submit" type="submit" value="Agregar">
+                </div>
+            </form>
+            <!-- <h2 class="toDoElementos__heading">Tus pendientes por comprar:</h2> -->
+            <div id="toDoElementos" class="toDoElementos">
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

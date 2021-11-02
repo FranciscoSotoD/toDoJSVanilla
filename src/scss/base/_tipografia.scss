@@ -1,0 +1,35 @@
+@use 'variables' as v;
+
+h1, h2, h3 {
+    font-family: v.$fuentePrincipal;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    padding: v.$separacion 0;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.6rem;
+    color: v.$primario;
+}
+h3 {
+    font-size: 3.2rem;
+}
+.heading-blanco {
+    @extend h2;
+    color: v.$blanco;
+
+    span {
+        color: v.$blanco
+    }
+
+    &::after {
+        display: none;
+    }
+}
+[class$="__heading"] {
+    margin: 2rem 0;
+}

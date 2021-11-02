@@ -1,0 +1,13 @@
+@use 'base/variables' as v;
+
+.formulario {
+    
+    &__label {
+        font-family: v.$fuenteCursiva;
+        font-size: 2rem;
+    }
+    &__input {
+        padding: 1rem;
+        width: 35rem;
+    }
+}
