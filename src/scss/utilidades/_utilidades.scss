@@ -15,3 +15,20 @@
 .padding-bottom-0 {
     padding-bottom: 0;
 }
+.eliminar {
+    background-color: v.$rojo;
+    color: v.$blanco;
+    padding: .5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+.toDoSeparacion {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    font-family: v.$fuenteSecundaria
+}
+.toDoCompletado {
+    color: v.$verde;
+    text-decoration-line: line-through;
+}
