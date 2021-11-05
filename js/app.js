@@ -6,10 +6,6 @@ const toDo = document.querySelector('#toDoElementos');
 
 let listaToDo = [];
 
-const c = document.querySelectorAll('#toDoSeparacion');
-console.log( typeof c );
-console.log( c );
-
 // Eventos
 addEventsListeners();
 function addEventsListeners() {
@@ -24,20 +20,23 @@ function addEventsListeners() {
         listaToDo = JSON.parse( localStorage.getItem('toDo') ) || [];
         // console.log( listaToDo );
         
-        
+        inyectarAlHtml();
 
+        const c = document.querySelectorAll('.toDoSeparacion');
+        console.log( c );
+        
         listaToDo.forEach( (i) => {
             // console.log( i.completado );
             if( i.completado ) {
-                // console.log( i ,'true' );
+                console.log( i ,'true' );
+                c.classList.add('toDoCompletado');
             } else {
-                // console.log( i, 'false' );
+                console.log( i, 'false' );
+                // c.classList.remove('toDoCompletado');
             }
         } )
         
-        
-        inyectarAlHtml();
-    } );    
+    } );   
 
 }
 
@@ -77,12 +76,11 @@ function inyectarAlHtml() {
             }
 
             // CrearHTML
-            const p = document.createElement('li');
+            const p = document.createElement('p');
 
             // Añadir el texto y botón de eliminar
             p.innerText = tareaPendiente.texto;
             p.classList.add('toDoSeparacion');
-            p.setAttribute('id', 'toDoSeparacion');
 
             p.appendChild(btnEliminar);
             
